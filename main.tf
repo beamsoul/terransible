@@ -66,7 +66,7 @@ resource "aws_vpc" "wp_vpc" {
 }
 #internet gateway
 
-resource "aws_internet_gateway" "wp_internet_gateway"{
+resource "aws_internet_gateway" "wp_internet_gateway" {
   vpc_id = "${aws_vpc.wp_vpc.id}"
 
   tags {
@@ -81,7 +81,7 @@ resource "aws_route_table" "wp_public_rt" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway   = "${aws_internet_gateway.wp_internet_gateway.id}"
+    gateway_id  = "${aws_internet_gateway.wp_internet_gateway.id}"
   }
   tags {
     Name = "wp_public"
