@@ -95,3 +95,9 @@ resource "aws_default_route_table" "wp_private_rt"{
     Name = "wp_public"
   }
 }
+#Subnets 
+
+resource "aws_subnet" "wp_public1_subnet" {
+  vpc_id  = "${var.aws_vpc.wp_vpc.id}"
+  cidr_block = "${var.cidr["public1"]}"
+}
