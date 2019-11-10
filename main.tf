@@ -101,3 +101,7 @@ resource "aws_subnet" "wp_public1_subnet" {
   vpc_id  = "${var.aws_vpc.wp_vpc.id}"
   cidr_block = "${var.cidr["public1"]}"
 }
+resource "aws_subnet" "wp_public2_subnet" {
+  vpc_id  = "${var.aws.vpc.wp_vpc.id}"
+  cidr_block = "${var.cidr["public2"]}"
+}
