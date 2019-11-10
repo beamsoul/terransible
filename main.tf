@@ -99,10 +99,10 @@ resource "aws_default_route_table" "wp_private_rt"{
 
 resource "aws_subnet" "wp_public1_subnet" {
   vpc_id  = "${var.aws_vpc.wp_vpc.id}"
-  cidr_block = "${var.cidr["public1"]}"
+  cidr_block = "${var.cidrs["public1"]}"
 }
 resource "aws_subnet" "wp_public2_subnet" {
   vpc_id  = "${var.aws_vpc.wp_vpc.id}"
-  cidr_block = "${var.cidr["public2"]}"
+  cidr_block = "${var.cidrs["public2"]}"
 }
      
