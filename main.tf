@@ -98,7 +98,7 @@ resource "aws_default_route_table" "wp_private_rt"{
 
 resource "aws_subnet" "wp_public1_subnet" {
   vpc_id  = "${aws_vpc.wp_vpc.id}"
-  cidr_block = "${var.cidrs["public1"]}"
+  cidr_block = "${var.cidrs ["public1"]}"
   map_public_ip_on_launch = true 
   availability_zone = "${data.aws_availability_zones.available.names[0]}"
 
