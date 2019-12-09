@@ -1,2 +1,2 @@
 # terransible
-this is my terraform ansible repo
+Creating a resources on AWS with Terraform and Ansible 
